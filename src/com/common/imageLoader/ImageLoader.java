@@ -119,6 +119,6 @@ public class ImageLoader {
 		return null;
 	}
 	public Bitmap setBitmap(ImageView iv,String url){
-		return setBitmap(iv,url,null);
+		return setBitmap(iv,url,new Handler());
 	}
 }
