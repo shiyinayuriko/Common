@@ -122,7 +122,7 @@ public class HttpLinkClient {
         String result = null;
         InputStream inputStream = null;
 		try {
-	        httpPost.setEntity(new UrlEncodedFormEntity(nameValuePairs==null?new ArrayList<NameValuePair>():nameValuePairs));
+	        httpPost.setEntity(new UrlEncodedFormEntity(nameValuePairs==null?new ArrayList<NameValuePair>():nameValuePairs,"UTF-8"));
 
 	        inputStream = httpClient.execute(httpPost).getEntity().getContent();
 	        BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
